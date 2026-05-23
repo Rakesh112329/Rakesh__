@@ -110,6 +110,68 @@
 		.zoom-effect:hover {
 			transform: scale(1.1);
 		}
+
+		.theme-btn{
+    background:none;
+    border:2px solid #ffbd39;
+    color:#ffbd39;
+    padding:6px 12px;
+    border-radius:8px;
+    cursor:pointer;
+    margin-left:15px;
+}
+
+/* Light Theme */
+body.light-mode{
+    background:#ffffff;
+    color:#222;
+}
+
+body.light-mode .ftco-section,
+body.light-mode .hero,
+body.light-mode .resume-wrap,
+body.light-mode .blog-entry,
+body.light-mode .box{
+    background:#ffffff !important;
+    color:#222 !important;
+}
+
+body.light-mode .heading-section h1,
+body.light-mode .heading-section h2,
+body.light-mode p,
+body.light-mode li,
+body.light-mode span{
+    color:#222 !important;
+}
+
+/* GitHub Section */
+body.light-mode .github-section{
+    background:#f8fafc !important;
+}
+
+body.light-mode .github-title,
+body.light-mode .github-subtitle{
+    color:#222 !important;
+}
+
+/* Coding Section */
+body.light-mode #coding-profiles{
+    background:#f8fafc !important;
+}
+
+body.light-mode .coding-title,
+body.light-mode .coding-subtitle{
+    color:#222 !important;
+}
+
+/* Navbar */
+body.light-mode .navbar{
+    background:#fff !important;
+}
+
+body.light-mode .navbar a{
+    color:#222 !important;
+}
 	</style>
 
 
@@ -133,6 +195,10 @@
 					<li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
 					<li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
 					<li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+
+					<li class="nav-item">
+            <button id="theme-toggle" class="theme-btn">🌙</button>
+        </li>
 				</ul>
 			</div>
 		</div>
@@ -538,6 +604,216 @@
 				</div>
 	</section>
 
+
+<!-- ================= GitHub Stats Section ================= -->
+<section id="github" class="github-section">
+    <h2 class="github-title">GitHub Stats</h2>
+    <p class="github-subtitle">My Open Source Contributions & Coding Activity</p>
+
+   <div class="github-container">
+    <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/stats?username=Rakesh112329&theme=github_dark"
+        alt="GitHub Stats">
+
+    <img
+        src="https://github-profile-summary-cards.vercel.app/api/cards/repos-per-language?username=Rakesh112329&theme=github_dark"
+        alt="Languages">
+</div>
+
+    <!-- GitHub Profile Link -->
+    <a href="https://github.com/Rakesh112329"
+       target="_blank"
+       class="github-btn">
+       View GitHub Profile
+    </a>
+</section>
+
+<style>
+.github-section{
+    padding:80px 20px;
+    text-align:center;
+    background:#0f172a;
+}
+
+.github-title{
+    font-size:40px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.github-subtitle{
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+.github-container{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:20px;
+}
+
+.github-container img{
+    max-width:450px;
+    width:100%;
+    border-radius:12px;
+}
+
+.github-btn{
+    display:inline-block;
+    margin-top:30px;
+    padding:12px 25px;
+    background:#2563eb;
+    color:#fff;
+    text-decoration:none;
+    border-radius:8px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.github-btn:hover{
+    background:#1d4ed8;
+}
+</style>
+
+ 
+
+<!-- ================= Coding Profiles Section ================= -->
+
+<section id="coding-profiles">
+
+    <h2 class="coding-title">Coding Profiles</h2>
+    <p class="coding-subtitle">
+        Competitive Programming & Problem Solving Journey
+    </p>
+
+    <!-- LeetCode Stats -->
+    <div class="leetcode-card">
+        <img
+            src="https://leetcard.jacoblin.cool/Rakesh_kumar6207?theme=dark&font=Karma"
+            alt="LeetCode Stats">
+    </div>
+
+    <!-- Profile Links -->
+    <div class="profile-links">
+
+        <a href="https://leetcode.com/u/Rakesh_kumar6207/"
+           target="_blank"
+           class="profile-btn leetcode-btn">
+            LeetCode Profile
+        </a>
+
+        <a href="https://www.geeksforgeeks.org/profile/rakeshr0rsi"
+           target="_blank"
+           class="profile-btn gfg-btn">
+            GeeksforGeeks Profile
+        </a>
+
+        <a href="https://www.hackerrank.com/profile/rakeshraj5186"
+           target="_blank"
+           class="profile-btn hr-btn">
+            HackerRank Profile
+        </a>
+
+    </div>
+
+</section>
+
+<style>
+
+/* ================= Coding Profiles ================= */
+
+#coding-profiles{
+    padding:80px 10%;
+    background:#07122b;
+    text-align:center;
+}
+
+.coding-title{
+    font-size:55px;
+    color:#fff;
+    margin-bottom:10px;
+}
+
+.coding-subtitle{
+    font-size:20px;
+    color:#cbd5e1;
+    margin-bottom:40px;
+}
+
+/* LeetCode Card */
+
+.leetcode-card{
+    max-width:1100px;
+    margin:auto;
+}
+
+.leetcode-card img{
+    width:100%;
+    border-radius:18px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.35);
+}
+
+/* Buttons */
+
+.profile-links{
+    margin-top:35px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.profile-btn{
+    padding:14px 30px;
+    text-decoration:none;
+    border-radius:10px;
+    font-weight:600;
+    transition:0.3s ease;
+    font-size:16px;
+}
+
+.leetcode-btn{
+    background:#FFA116;
+    color:white;
+}
+
+.gfg-btn{
+    background:#2F8D46;
+    color:white;
+}
+
+.hr-btn{
+    background:#00EA64;
+    color:#000;
+}
+
+.profile-btn:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Mobile */
+
+@media(max-width:768px){
+
+    .coding-title{
+        font-size:38px;
+    }
+
+    .coding-subtitle{
+        font-size:16px;
+    }
+
+    .profile-btn{
+        width:100%;
+        max-width:300px;
+    }
+}
+
+</style>
+
+
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
 		<div class="container">
 			<div class="row d-md-flex align-items-center">
@@ -620,7 +896,7 @@
 							<span class="icon-phone2"></span>
 						</div>
 						<h3 class="mb-4">Contact Number</h3>
-						<p><a href="tel://0101010101">+92 6207015375</a></p>
+						<p><a href="tel://0101010101">+91 6207015375</a></p>
 					</div>
 				</div>
 				<div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -713,6 +989,31 @@
 	<script src="js/scrollax.min.js"></script>
 
 	<script src="js/main.js"></script>
+
+	<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+
+<script src="js/main.js"></script>
+
+<script>
+const toggleBtn = document.getElementById("theme-toggle");
+
+if(localStorage.getItem("theme")==="light"){
+    document.body.classList.add("light-mode");
+}
+
+toggleBtn.addEventListener("click",()=>{
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+        localStorage.setItem("theme","light");
+    }else{
+        localStorage.setItem("theme","dark");
+    }
+});
+</script>
+
+
 
 </body>
 
